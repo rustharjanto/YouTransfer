@@ -1,0 +1,30 @@
+{% if not isXMLHttpRequest %}{% extends 'layout.html' %}{% else %}{% extends 'xhr.html' %}{% endif -%}
+
+{% block content %}
+<div class="hp jumbotron" id="unlock">
+	{% include "title.html" %}
+	
+	<div class="unlock text-center">
+		<form class="form-inline" method="post">
+			<p>Please provide the code to unlock the settings pages</p>
+			<div class="form-group">
+				<input type="password" class="form-control" name="unlockCode" id="unlockCode" required="true">
+				<button type="submit" class="btn btn-primary">Unlock</button>
+			</div>
+		</form>
+
+		{% if errors.length > 0 %}
+
+		<div class="download text-center">
+			{% import "errors.html" as err %}
+			{{ err.show(errors) }}
+		</div>
+
+		{% endif %}
+
+	</div>
+	<div class="text-center">
+		<a href="/" data-async data-target="unlock">or return to homepage</a>
+	</div>
+</div>
+{% endblock %}

@@ -1,0 +1,97 @@
+
+.dropzone {
+	background: white none repeat scroll 0 0;
+    border: 2px dashed #0087f7;
+    border-radius: 5px;
+    padding: 0;
+}
+
+/* Mimic table appearance */
+.dz-preview-template.table {
+	display: table;
+	border-collapse: collapse;
+}
+
+.dropzone.dz-files-added .dz-preview-template.table {
+	margin-top: 25px;
+}
+
+.dz-preview-template.table .dz-preview-item {
+	display: table-row;
+	border-top: 1px solid #ddd;
+}
+
+.dz-preview-template.table .dz-preview-item > div {
+	display: table-cell;
+	vertical-align: top;
+	padding: 8px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.dz-preview-template.table .dz-preview-item:nth-child(odd) {
+	background: #f9f9f9;
+}
+
+.dz-preview-template .dz-preview-item .dz-preview-description p {
+	font-size: inherit;
+	margin: 0 0 5px;
+}
+
+/* Hide the delete button initially */
+.dz-preview-template .dz-preview-item .dz-action-delete {
+	display: none;
+}
+
+/* Hide the progress bar & action buttons when finished */
+.dz-preview-template.table .dz-preview-item.dz-success .dz-preview-progress,
+.dz-preview-template.table .dz-preview-item.dz-success .dz-preview-actions {
+	display: none;
+}
+
+.dz-preview-template.table .dz-preview-item.dz-success .dz-preview-result {
+	display: block;
+}
+
+.dz-preview-template.table .dz-preview-item.dz-success .dz-preview-description {
+	white-space: inherit;
+}
+
+.dz-preview-template.table .dz-preview-item .dz-preview-progress {
+	vertical-align: middle;
+	min-width: 75px;
+	max-width: 100px;
+}
+
+.dz-preview-template .dz-preview-bundle {
+	margin-bottom: 15px;
+}
+
+.dz-preview-progress .progress {
+	margin-bottom: 0;
+}
+
+.dz-preview-actions {
+	max-width: 80px;
+}
+
+.dz-preview-actions .btn {
+	font-size: 10px;
+}
+
+.dz-files-added {
+	border: none;
+}
+
+.dz-files-added .dz-message {
+	display: none;
+}
+
+.dz-upload-complete input,
+.dz-upload-complete textarea {
+	border-radius: none;
+	box-shadow: none;
+	border: none;
+	border-bottom: 1px solid #eee;
+}

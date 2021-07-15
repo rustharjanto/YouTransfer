@@ -1,0 +1,247 @@
+
+/*// ------------------------------------------------------------------------------------------ Homepage */
+
+.hp {
+	position: relative;
+	margin: 40px 5px 80px 5px;
+	min-height: 450px;
+	background-color: #fff;
+}
+
+.hp::after,
+.hp::before {
+    content: " ";
+    display: table;
+}
+
+.hp::after {
+    clear: both;
+}
+
+.hp header {
+	margin-bottom: 20px;
+}
+
+.hp .profile {
+	position: absolute; 
+	top: 20px; 
+	right: 20px; 
+}
+
+.hp .profile.dropdown {
+	overflow: hidden;
+}
+
+.hp .profile.dropdown:hover {
+	height: auto;
+	overflow: visible;
+}
+
+.hp .profile.dropdown .dropdown-menu {
+	display: block;
+}
+
+.hp .profile img {
+	border: 0.5px solid #ccc; 
+	height: 64px; 
+	width: 64px; 
+	border-radius: 50px;
+}
+
+.hp .profile .dropdown-menu {
+	left: -94px;
+}
+
+@media (min-width: @screen-md-min) {
+	.hp.jumbotron {
+		padding: 40px 80px;
+	}
+}
+
+@media (max-width: @screen-xs-min) {
+	.hp.jumbotron {
+		padding: 20px;
+	}
+}
+
+.hp .dropzone {
+	margin-top: 20px;
+}
+
+.hp .dz-preview-template {
+	margin-top: 25px;
+}
+
+.hp .dropzone .dz-preview-template {
+	margin-top: 0;
+}
+
+.hp .fallback {
+	margin-top: 55px;
+	text-align: center;
+}
+
+.hp .download {
+	margin-bottom: 20px;
+}
+
+.hp .separator {
+	margin: 30px 0 10px;
+}
+
+.hp .separator-text {
+	display: inline-block;
+	background-color: #fff;
+	width: 50px;
+}
+
+.hp .separator-ruler {
+	margin: -16px auto 10px;
+	border-top: 1px solid #ddd;
+}
+
+/*
+Visual feedback for non-javascript users.
+Unfortunately IE only supports :valid pseudo selectors on input elements.
+For those users the experience will be less intuitive.
+*/
+
+.hp .fallback button[type="reset"] {
+	display: none;
+}
+
+.hp .fallback form:invalid > button {
+	display: none;
+}
+
+.hp .fallback form:valid > button {
+	display: inline-block;
+}
+
+.hp .fallback form:valid label {
+	display: none;
+}
+
+.hp .fallback form input:valid + span {
+	display: inline-block;
+	padding: 6px 12px;
+	background-color: #5cb85c;
+	border-color: #4cae4c;
+	color: #fff;
+}
+
+.hp .fallback form label {
+	margin-bottom: 0;
+}
+
+/*// ------------------------------------------------------------------------------------------ Download */
+
+.dl.hp header {
+	margin-bottom: 75px;
+}
+
+/*// ------------------------------------------------------------------------------------------ Unlock */
+
+#unlock.hp header {
+	margin-bottom: 75px;
+}
+
+#unlock .unlock {
+	margin-bottom: 20px;
+}
+
+/*// ------------------------------------------------------------------------------------------ Settings */
+
+.settings {
+	position: relative;
+	margin: 40px 5px 70px;
+	background-color: #eee;
+	min-height: 450px;
+	border-radius: 4px;
+}
+
+.settings::after,
+.settings::before {
+    content: " ";
+    display: table;
+}
+
+.settings::after {
+    clear: both;
+}
+
+.settings .col-md-3,
+.settings .col-md-9 {
+	padding: 0;
+}
+
+.settings .nav-tabs li:first-child a {
+	border-radius: 4px 0 0 0;
+}
+
+.settings .nav-tabs li.active a {
+	border: none;
+	background-color: #337ab7;
+}
+
+.settings .nav-tabs li a {
+	border: none;
+	border-radius: 0;
+	margin-right: 0;
+	background-color: white;
+}
+
+.settings .tab-content {
+	background-color: white;
+	min-height: 450px;
+	padding: 10px;
+	border-radius: 0 4px 4px 0;
+	padding: 20px;
+}
+
+.settings .tab-content h1 {
+	border-bottom: 1px solid #eee;
+	margin-top: 0px;
+}
+
+.settings .finalise {
+	position: absolute;
+	bottom: 2px;
+	padding: 10px;
+}
+
+@media (max-width: @screen-xs-min) {
+	.settings .finalise {
+		width: 100%;
+		margin-top: 40px;
+	}
+
+	.settings .tab-content {
+		margin-bottom: 20px;
+	}
+}
+
+@media (max-width: @screen-md-min) {
+	.settings .finalise {
+		width: 100%;
+		margin-top: 40px;
+	}
+
+	.settings .tab-content {
+		margin-bottom: 20px;
+	}
+}
+
+.settings .finalise a {
+	width: 100%;
+}
+
+.settings dt {
+	margin-top: 10px;
+}
+
+/*// ------------------------------------------------------------------------------------------ Error pages */
+
+#notfound .link {
+	margin-top: 75px;
+}
